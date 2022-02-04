@@ -47,7 +47,7 @@ app.use( express.static('public') );
 /* HABILITA EL USO DE EJS */
 app.set('view engine', 'ejs');
 
-app.use(authWebRouter)
+/* app.use(authWebRouter) */
 app.use(productosWebRouter)
 app.use(randomsApiRouter)
 app.use(infoRouter)
