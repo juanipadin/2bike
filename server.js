@@ -22,7 +22,7 @@ const io = new SocketServer(httpServer);
 
 /* CARGA DE SESION */
 const session = require( 'express-session' );
-const authWebRouter = require('./routers/web/auth')
+/* const authWebRouter = require('./routers/web/auth') */
 const productosWebRouter = require('./routers/web/home')
 const randomsApiRouter = require('./routers/web/randoms')
 const infoRouter = require('./routers/web/info')
