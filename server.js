@@ -112,14 +112,13 @@ app.get('/list-productos', async (req, res) =>{
 })
 
 /* REALIZA LA CONECCIÓN Y VERIFICA ERRORES */
-const PORT = 8080;
 
 /* mongoose.connect(config.mongoLocal.cnxStr, { useNewUrlParser: true, useUnifiedTopology: true }, err => {
     if(err) {
       console.error('Erro connection mongo');
     } */
 
-const connectedServer = httpServer.listen(PORT, () => {
+const connectedServer = httpServer.listen(process.env.PORT || 5000, () => {
     console.log(`Servidor en Http con Websocket escuchando en el puerto ${connectedServer.address().port}`)
 })
 
