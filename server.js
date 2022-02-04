@@ -111,7 +111,10 @@ app.get('/list-productos', async (req, res) =>{
     })
 })
 
-/* REALIZA LA CONECCIÓN Y VERIFICA ERRORES */
+/* ESTABLECE EL PUERTO PARA CONEXIÓN LOCAL */
+/* const PORT = 8080 */
+
+/* REALIZA LA CONEXIÓN Y VERIFICA ERRORES */
 
 /* mongoose.connect(config.mongoLocal.cnxStr, { useNewUrlParser: true, useUnifiedTopology: true }, err => {
     if(err) {
