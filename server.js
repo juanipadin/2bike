@@ -85,7 +85,7 @@ io.on('connection', async (socket) => {
     socket.on('new-message', async data => {
         data.fechaHora = new Date().toLocaleString();
         await mensajes.saveMessages(data);
-        const messages = await mensajes.getMessages();
+        const messages = await mensajes.getMessagess();
         io.sockets.emit('messages', messages);
     }) 
 })
@@ -111,9 +111,6 @@ app.get('/list-productos', async (req, res) =>{
     })
 })
 
-/* ESTABLECE EL PUERTO PARA CONEXIÓN LOCAL */
-/* const PORT = 8080 */
-
 /* REALIZA LA CONEXIÓN Y VERIFICA ERRORES */
 
 /* mongoose.connect(config.mongoLocal.cnxStr, { useNewUrlParser: true, useUnifiedTopology: true }, err => {
@@ -121,7 +118,7 @@ app.get('/list-productos', async (req, res) =>{
       console.error('Erro connection mongo');
     } */
 
-const connectedServer = httpServer.listen(process.env.PORT || 5000, () => {
+const connectedServer = httpServer.listen(process.env.PORT || 8080, () => {
     console.log(`Servidor en Http con Websocket escuchando en el puerto ${connectedServer.address().port}`)
 })
 
