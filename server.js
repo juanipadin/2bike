@@ -52,7 +52,7 @@ app.use(productosWebRouter)
 app.use(randomsApiRouter)
 app.use(infoRouter)
 
-app.use(session({
+/* app.use(session({
     store: MongoStore.create({ mongoUrl: config.mongoLocal.cnxStr }),
     secret: 'shhhhhhhhhhhhhhhhhhhhh',
     resave: false,
@@ -61,7 +61,7 @@ app.use(session({
     cookie: {
         maxAge: 60000
     }
-}))
+})) */
 
 app.use(passport.initialize());
 app.use(passport.session());
